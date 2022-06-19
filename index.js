@@ -1,8 +1,9 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
   for (let i=0; i<array.length; i++){
-    for (let j= i+1; i<array.length; j++){
-      if (array[1] + array[j] === target) {
+    const complement = target - array[i];
+    for (let j= i+1; j < array.length; j++){
+      if (array[j] === complement) {
         return true;
       }
     }
